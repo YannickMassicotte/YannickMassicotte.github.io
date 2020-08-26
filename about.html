@@ -15,29 +15,33 @@
 		<div id="page-wrapper">
 
 			<!-- Header -->
-            <header id="header">
-                <h1><a href="index.html">Junior</a>&nbsp&nbspWeb Developer</h1>
-                <nav id="nav">
-                    <ul>
-                        <li>
-                            <a href="#" class="icon solid fa-angle-down">About Me</a>
-                            <ul>
-                                <li><a href="generic.html">Who Am I</a></li>
-                                <li><a href="contact.html">My Skills</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#" class="icon solid fa-angle-down">My Projects</a>
-                            <ul>
-                                <li><a href="generic.html">Generic</a></li>
-                                <li><a href="contact.html">Contact</a></li>
-                                <li><a href="elements.html">Elements</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="contact.html" class="button">Contact</a></li>
-                    </ul>
-                </nav>
-            </header>
+			<header id="header">
+				<h1 style="font-size: 20px;"><a href="index.html">Junior</a>&nbsp&nbspWeb Developer</h1>
+				<nav id="nav">
+					<ul>
+						<li>
+							<a href="index.html">Home</a>
+						</li>
+						<li>
+							<a href="about.html" class="icon solid fa-angle-down">About Me</a>
+							<ul>
+								<li><a href="generic.html">Who Am I</a></li>
+								<li><a href="contact.html">Work Experience</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="projects.html" class="icon solid fa-angle-down">My Projects</a>
+							<ul>
+								<li><a href="projects.html">Budget App</a></li>
+								<li><a href="projects.html">E-Commerce website</a></li>
+								<li><a href="projects.html">Vanilla Javascript</a></li>
+								<li><a href="projects.html">Login-Registration</a></li>
+							</ul>
+						</li>
+						<li><a href="contact.html" class="button">Contact</a></li>
+					</ul>
+				</nav>
+			</header>
 
 			<!-- Main -->
 				<section id="main" class="container">
@@ -60,15 +64,29 @@
 							</div>
 						</div>
 					</div>
+
+					<header>
+						<h2>My Work Experience</h2>
+					</header>
+					<div class="box" style="height: 400px; margin: 0;">
+						<span class="image" style="float: left; margin: 0 10px;"><img src="images/Work-Me.png" alt="" /></span>
+						<h3 style="text-align: center;">Multidisciplinary Person</h3>
+						<p style="text-align: justify">&nbsp;&nbsp;&nbsp;&nbsp;I've been trained as a musician, lab technician and more recently as a web developer.  Throughout my various working experiences, I've learned to become a team player and my own self-discipline leader.  It's important for me to stay professional and always be oriented towards problem-solving.  I'm now ready for new challenges ! </p>
+						<p><strong>Here you'll find Google Drive links to both my <span style="color: #e89980;">CV</span> and <span style="color: #e89980;">Cover Letter</span> : </strong></p>
+						<div class="cv-cover-letter" style="text-align: center;">
+							<i class="fas fa-file-pdf" style="font-size: 20px; margin-right: 30px; color: #e89980;cursor: pointer;"><span>&nbsp;CV</span></i>
+							<i class="fas fa-envelope-open-text" style="font-size: 20px; color: #e89980; cursor: pointer;"><span>&nbsp;Cover Letter</span></i>
+						</div>
+					</div>
 				</section>
 
-						<!-- CTA -->
+						<!-- Footer -->
 						<section id="cta">
 
 							<h2>&copy; YanniMassi Inc.  All rights reserved 2020.</h2>
 							<p>Please contact me if you need additionnal information</p>
 							<ul class="icons">
-								<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+								<li><a href="https://github.com/YannickMassicotte" class="icon brands fa-github"><span class="label">Github</span></a></li>
 								<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">Linkedin-in</span></a></li>
 							</ul>
 						</section>
@@ -84,6 +102,13 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			<script>
+				$(".fa-file-pdf").click(function(){
+					window.open('https://drive.google.com/drive/folders/1owrwIls2DqGzCPaF9tH7R7Mev7wX_3O8?usp=sharing')
+				});
+				$(".fa-envelope-open-text").click(function(){
+					window.open('https://drive.google.com/drive/folders/1owrwIls2DqGzCPaF9tH7R7Mev7wX_3O8?usp=sharing')
+				});
+			</script>
 	</body>
 </html>
