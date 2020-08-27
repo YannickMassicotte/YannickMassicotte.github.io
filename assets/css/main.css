@@ -2685,11 +2685,22 @@ body.landing #main {
   padding-left: 0;
 }
 
+/* MODALS */
+.scale-change {
+  transform: scale(1);
+  transition: all 0.5s ease-in-out;
+}
+
+.scale-change.animate {
+  transform: scale(1.1);
+}
+/* !MODALS */
+
 /* CTA */
 #cta {
   background: #e89980;
   color: #f9e6df;
-  padding: 3.5em 0 4em 0;
+  padding: 2em 0 2em 0;
   text-align: center;
 }
 #cta h2, #cta h3, #cta h4, #cta h5, #cta h6 {

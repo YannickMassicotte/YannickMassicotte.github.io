@@ -33,7 +33,7 @@
 								<ul>
 									<li><a href="projects.html">Budget App</a></li>
 									<li><a href="projects.html">E-Commerce website</a></li>
-									<li><a href="projects.html#vanilla-js">Vanilla Javascript</a></li>
+									<li><a href="vanilla-js.html">Vanilla Javascript</a></li>
 									<li><a href="projects.html">Login-Registration</a></li>
 								</ul>
 							</li>

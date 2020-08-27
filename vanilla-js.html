@@ -34,7 +34,7 @@
 					<ul>
 						<li><a href="projects.html">Budget App</a></li>
 						<li><a href="projects.html">E-Commerce website</a></li>
-						<li><a href="projects.html#vanilla-js">Vanilla Javascript</a></li>
+						<li><a href="vanilla-js.html">Vanilla Javascript</a></li>
 						<li><a href="projects.html#login">Login-Registration</a></li>
 					</ul>
 				</li>
@@ -53,34 +53,34 @@
 		</section>
 		
 		<!-- My Projects -->
-		<section class="box special features" style="margin-top: 30px;">
+		<section class="box special features" style="margin-top: 60px; padding: 10px;">
             <h2 style="margin: 7px auto;">My Vanilla Javascript Projects</h2>
             <h4>...actually just a few of them</h4>
 			<div class="features-row">
 				<section>
-					<span class="icon solid major fa-shopping-cart accent2 mod" id="grocery" style="cursor: pointer;"></span>
+					<span class="icon solid major fa-shopping-cart accent2 mod scale-change" id="grocery" style="cursor: pointer;"></span>
 					<h3 class="mod" id="grocery" style="cursor: pointer;">Grocery Bud</h3>
 					<p>Online Grocery List Using Local Storage.</p>
 				</section>
 				<section>
-					<span class="icon solid major fa-utensils accent3 mod" id="menu" style="cursor: pointer;"></span>
+					<span class="icon solid major fa-utensils accent3 mod scale-change" id="menu" style="cursor: pointer;"></span>
 					<h3 class="mod" id="menu" style="cursor: pointer;">Menu</h3>
 					<p>Delicious Restaurant Menu with Categories.</p>
 				</section>
 			</div>
 			<div class="features-row">
 				<section>
-					<span class="icon solid major fa-stopwatch accent4 mod" id="countdown" style="cursor: pointer;"></span>
+					<span class="icon solid major fa-stopwatch accent4 mod scale-change" id="countdown" style="cursor: pointer;"></span>
 					<h3 style="cursor: pointer;" class="mod" id="countdown">CountDown</h3>
 					<p>How long will it takes before YOU get to 100 y/o ?</p>
 				</section>
 				<section>
-					<span class="icon solid major fa-rainbow accent5 mod" id="bg-color" style="cursor: pointer;"></span>
+					<span class="icon solid major fa-rainbow accent5 mod scale-change" id="bg-color" style="cursor: pointer;"></span>
 					<h3 class="mod" id="bg-color" style="cursor: pointer;">Background-Color</h3>
 					<p>Want to test some HEX, RGB, RGBA colors ?</p>
 				</section>
             </div>
-            <button class="btn-more" type="button" style="width: 10%; height: 80%; color: #fff; background-color: #e89980; border: none; border-radius: 10px 0px 0px 10px; font-size: 20px;cursor: pointer; margin-top: 10px;">See more</button>
+            <button class="btn-more scale-change" type="button" style="width: 10%; height: 80%; color: #fff; background-color: #e89980; border: none; border-radius: 10px 0px 0px 10px; font-size: 20px; padding: 5px; cursor: pointer; margin-top: 15px;"><a href="https://github.com/YannickMassicotte?tab=repositories"></a>See more</button>
 		</section>
 
 	</section>
@@ -106,6 +106,9 @@
 			<script src="assets/js/main.js"></script>
 			<!-- Modal Popup Projects -->
 			<script>
+				$(".scale-change").hover(function(e){
+					$(this).toggleClass('animate');
+				});
 				$(".mod").click(function(e){
 					$("#mod-gif").attr("src", `./images/gif/${e.target.id}.gif`); 
 					$(".modal").css("display", "flex");

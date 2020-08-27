@@ -33,7 +33,7 @@
 						<ul>
 							<li><a href="projects.html">Budget App</a></li>
 							<li><a href="projects.html">E-Commerce website</a></li>
-							<li><a href="projects.html#vanilla-js">Vanilla Javascript</a></li>
+							<li><a href="vanilla-js.html">Vanilla Javascript</a></li>
 							<li><a href="projects.html#login">Login-Registration</a></li>
 						</ul>
 					</li>
@@ -49,29 +49,29 @@
 		</section>
                 
 		<!-- My Projects -->
-		<section class="box special features" style="margin-top: 30px;">
+		<section class="box special features" style="margin-top: 60px; padding: 10px;">
 			<h2 style="margin-bottom: 3px;">My Projects</h2>
 			<h4>...actually just a few of them</h4>
 			<div class="features-row">
 				<section>
-					<span class="icon solid major fa-dollar-sign accent2 mod" id="budget" style="cursor: pointer;"></span>
+					<span class="icon solid major fa-dollar-sign accent2 mod scale-change" id="budget" style="cursor: pointer;"></span>
 					<h3 class="mod" id="budget" style="cursor: pointer;">Budget App</h3>
 					<p>Budget calculator using the Angular modern framework.</p>
 				</section>
 				<section>
-					<span class="icon solid major fa-chart-area accent3 mod" id="mobshop" style="cursor: pointer;"></span>
+					<span class="icon solid major fa-chart-area accent3 mod scale-change" id="mobshop" style="cursor: pointer;"></span>
 					<h3 class="mod" id="mobshop" style="cursor: pointer;">E-Commerce Website</h3>
 					<p>MobShop is an fictionnal online e-commerce website in the style of Ebay and Amazon. Built with jQuery, PHP and MySQL.</p>
 				</section>
 			</div>
 			<div class="features-row">
 				<section id="vanilla-js">
-					<a href="./vanilla-js.html" style="border: none;"><span class="icon solid major fa-cloud accent4" style="cursor: pointer; margin-bottom: 30px;"></span></a>
+					<a href="./vanilla-js.html" style="border: none;"><span class="icon solid major fa-cloud accent4 scale-change" style="cursor: pointer; margin-bottom: 30px;"></span></a>
 					<h3 style="cursor: pointer;"><a href="./vanilla-js.html" style="border: none;">Vanilla Javascript Projects</a></h3>
 					<p>15+ small projects using only HTML5, CSS and Vanilla Javascript.</p>
 				</section>
 				<section>
-					<span class="icon solid major fa-lock accent5 mod" id="login" style="cursor: pointer;"></span>
+					<span class="icon solid major fa-lock accent5 mod scale-change" id="login" style="cursor: pointer;"></span>
 					<h3 class="mod" id="login" style="cursor: pointer;">Secure Login/Registration</h3>
 					<p>Simple login and registration project using Bootstrap, PHP and MySQL.  Includes encryption of password and validation checks.</p>
 				</section>
@@ -100,6 +100,9 @@
             <script src="assets/js/main.js"></script>
             <!-- Modal Popup Projects -->
 			<script>
+				$(".scale-change").hover(function(e){
+					$(this).toggleClass('animate');
+				});
 				$(".mod").click(function(e){
 					$("#mod-gif").attr("src", `./images/gif/${e.target.id}.gif`); 
 					$(".modal").css("display", "flex");
@@ -110,6 +113,5 @@
 				});
 			</script>
 			<!-- !Modal Popup Projects -->
-
 	</body>
 </html>
