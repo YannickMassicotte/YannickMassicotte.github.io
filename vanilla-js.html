@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<!--
+	My Portfolio
+	Author: Yannick Massicotte
+-->
+<html>
+	<head>
+		<title>Yannick Massicotte</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="landing is-preload">
+		<div id="page-wrapper">
+
+	<!-- Header -->
+	<header id="header">
+		<h1 style="font-size: 20px;"><a href="index.html">Junior</a>&nbsp&nbspWeb Developer</h1>
+		<nav id="nav">
+			<ul>
+				<li>
+					<a href="index.html">Home</a>
+				</li>
+				<li>
+					<a href="about.html" class="icon solid fa-angle-down">About Me</a>
+					<ul>
+						<li><a href="about.html#who-am-i">Who Am I</a></li>
+						<li><a href="about.html#my-work-experience">Work Experience</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="projects.html" class="icon solid fa-angle-down">My Projects</a>
+					<ul>
+						<li><a href="projects.html">Budget App</a></li>
+						<li><a href="projects.html">E-Commerce website</a></li>
+						<li><a href="projects.html#vanilla-js">Vanilla Javascript</a></li>
+						<li><a href="projects.html#login">Login-Registration</a></li>
+					</ul>
+				</li>
+				<li><a href="contact.html" class="button">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<!-- Main -->
+	<section class="container large">
+        
+		<!-- Modal -->
+		<section class="box modal" style="margin-top: 50px; display: none; position: fixed; z-index: 1; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 100%; height: 100%; background-color: rgba(0,0,0,0.7); ">
+			<button class="btn-mod" type="button" style="width: 10%; height: 90%; float: right; top: 0; right: 0; color: #fff; background-color: #e89980; border: none; border-radius: 10px 0px 0px 10px; font-size: 20px;cursor: pointer;">Close</button>
+			<img src="" alt="Project" id="mod-gif" style="width: 80%; height: 90%; border-radius: 0px 10px 10px 0px;">
+		</section>
+		
+		<!-- My Projects -->
+		<section class="box special features" style="margin-top: 30px;">
+            <h2 style="margin: 7px auto;">My Vanilla Javascript Projects</h2>
+            <h4>...actually just a few of them</h4>
+			<div class="features-row">
+				<section>
+					<span class="icon solid major fa-shopping-cart accent2 mod" id="grocery" style="cursor: pointer;"></span>
+					<h3 class="mod" id="grocery" style="cursor: pointer;">Grocery Bud</h3>
+					<p>Online Grocery List Using Local Storage.</p>
+				</section>
+				<section>
+					<span class="icon solid major fa-utensils accent3 mod" id="menu" style="cursor: pointer;"></span>
+					<h3 class="mod" id="menu" style="cursor: pointer;">Menu</h3>
+					<p>Delicious Restaurant Menu with Categories.</p>
+				</section>
+			</div>
+			<div class="features-row">
+				<section>
+					<span class="icon solid major fa-stopwatch accent4 mod" id="countdown" style="cursor: pointer;"></span>
+					<h3 style="cursor: pointer;" class="mod" id="countdown">CountDown</h3>
+					<p>How long will it takes before YOU get to 100 y/o ?</p>
+				</section>
+				<section>
+					<span class="icon solid major fa-rainbow accent5 mod" id="bg-color" style="cursor: pointer;"></span>
+					<h3 class="mod" id="bg-color" style="cursor: pointer;">Background-Color</h3>
+					<p>Want to test some HEX, RGB, RGBA colors ?</p>
+				</section>
+            </div>
+            <button class="btn-more" type="button" style="width: 10%; height: 80%; color: #fff; background-color: #e89980; border: none; border-radius: 10px 0px 0px 10px; font-size: 20px;cursor: pointer; margin-top: 10px;">See more</button>
+		</section>
+
+	</section>
+
+	<!-- Footer -->
+	<section id="cta">
+		<h2>&copy; YanniMassi Inc.  All rights reserved 2020.</h2>
+		<p>Please contact me if you need additionnal information</p>
+		<ul class="icons">
+			<li><a href="https://github.com/YannickMassicotte" class="icon brands fa-github"><span class="label">Github</span></a></li>
+			<li><a href="https://www.linkedin.com/in/yannick-massicotte-8243701b4/" class="icon brands fa-linkedin-in"><span class="label">Linkedin-in</span></a></li>
+		</ul>
+	</section>
+
+</div>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<!-- Modal Popup Projects -->
+			<script>
+				$(".mod").click(function(e){
+					$("#mod-gif").attr("src", `./images/gif/${e.target.id}.gif`); 
+					$(".modal").css("display", "flex");
+					$(".modal").css("justifyContent", "center");
+				});
+				$(".btn-mod").click(function(){
+					$(".modal").css("display", "none");
+				});
+			</script>
+			<!-- !Modal Popup Projects -->
+	</body>
+</html>
