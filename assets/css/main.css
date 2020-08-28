@@ -2696,6 +2696,11 @@ body.landing #main {
 }
 /* !MODALS */
 
+/* VANILLA JS PROJECTS */
+.more {
+  display: none;
+}
+
 /* CTA */
 #cta {
   background: #e89980;

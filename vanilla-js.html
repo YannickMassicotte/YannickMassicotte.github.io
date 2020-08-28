@@ -48,24 +48,27 @@
         
 		<!-- Modal -->
 		<section class="box modal" style="margin-top: 50px; display: none; position: fixed; z-index: 1; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 100%; height: 100%; background-color: rgba(0,0,0,0.7); ">
-			<button class="btn-mod" type="button" style="width: 10%; height: 90%; float: right; top: 0; right: 0; color: #fff; background-color: #e89980; border: none; border-radius: 10px 0px 0px 10px; font-size: 20px;cursor: pointer;">Close</button>
+			<div class="buttons-mod" style="display: flex; flex-direction: column; width: 10%; height: 90%;">
+			<button class="btn-mod" type="button" style="width: 100%; height: 50%; float: right; top: 0; right: 0; color: #fff; background-color: #e89980; border: none; border-radius: 10px 0px 0px 10px; font-size: 20px;cursor: pointer;">Close</button>
+			<button class="btn-see-code" type="button" style="width: 100%; height: 50%; float: right; top: 0; right: 0; color: #fff; background-color: #013152; border: none; border-radius: 10px 0px 0px 10px; font-size: 20px;cursor: pointer;">See Code</button>
+			</div>
 			<img src="" alt="Project" id="mod-gif" style="width: 80%; height: 90%; border-radius: 0px 10px 10px 0px;">
 		</section>
 		
 		<!-- My Projects -->
-		<section class="box special features" style="margin-top: 60px; padding: 10px;">
+		<section class="box special features" style="margin-top: 60px; margin-bottom: 5px; padding: 10px;">
             <h2 style="margin: 7px auto;">My Vanilla Javascript Projects</h2>
-            <h4>...actually just a few of them</h4>
+            <h4 class="some-text">...actually just a few of them</h4>
 			<div class="features-row">
 				<section>
 					<span class="icon solid major fa-shopping-cart accent2 mod scale-change" id="grocery" style="cursor: pointer;"></span>
 					<h3 class="mod" id="grocery" style="cursor: pointer;">Grocery Bud</h3>
-					<p>Online Grocery List Using Local Storage.</p>
+					<p>Online grocery list using Local Storage.</p>
 				</section>
 				<section>
 					<span class="icon solid major fa-utensils accent3 mod scale-change" id="menu" style="cursor: pointer;"></span>
 					<h3 class="mod" id="menu" style="cursor: pointer;">Menu</h3>
-					<p>Delicious Restaurant Menu with Categories.</p>
+					<p>Delicious restaurant menu with categories.</p>
 				</section>
 			</div>
 			<div class="features-row">
@@ -80,7 +83,35 @@
 					<p>Want to test some HEX, RGB, RGBA colors ?</p>
 				</section>
             </div>
-            <button class="btn-more scale-change" type="button" style="width: 10%; height: 80%; color: #fff; background-color: #e89980; border: none; border-radius: 10px 0px 0px 10px; font-size: 20px; padding: 5px; cursor: pointer; margin-top: 15px;"><a href="https://github.com/YannickMassicotte?tab=repositories"></a>See more</button>
+            <button class="btn-more scale-change" type="button" style="width: 10%; height: 80%; color: #fff; background-color: #e89980; border: none; border-radius: 10px 0px 0px 10px; font-size: 20px; padding: 5px; cursor: pointer; margin-top: 15px;">See more</button>
+		</section>
+		<section class="box special features more" style="margin-top: 0px; padding: 10px;">
+			<h4 class="more-text">...here's some more</h4>
+			<div class="features-row">
+				<section>
+					<span class="icon solid major fa-paragraph accent2 mod scale-change" id="loremipsum" style="cursor: pointer;"></span>
+					<h3 class="mod" id="loremipsum" style="cursor: pointer;">Lorem Ipsum</h3>
+					<p>Lorem Ipsum paragraphs generator with categories.</p>
+				</section>
+				<section>
+					<span class="icon solid major fa-scroll accent3 mod scale-change" id="scroll" style="cursor: pointer;"></span>
+					<h3 class="mod" id="scroll" style="cursor: pointer;">Scroll Project</h3>
+					<p>Scrolling smoothly throught different sections of a web page.</p>
+				</section>
+			</div>
+			<div class="features-row">
+				<section>
+					<span class="icon solid major fa-desktop accent4 mod scale-change" id="modal" style="cursor: pointer;"></span>
+					<h3 style="cursor: pointer;" class="mod" id="modal">Modal</h3>
+					<p>Simple modal project with blury background.</p>
+				</section>
+				<section>
+					<span class="icon solid major fa-table accent5 mod scale-change" id="tabs" style="cursor: pointer;"></span>
+					<h3 class="mod" id="tabs" style="cursor: pointer;">Tabs Projects</h3>
+					<p>Showing the 5 pillars of a new socioeconomic system with tabs/categories.</p>
+				</section>
+            </div>
+            <button class="btn-less scale-change" type="button" style="width: 10%; height: 80%; color: #fff; background-color: #e89980; border: none; border-radius: 10px 0px 0px 10px; font-size: 20px; padding: 5px; cursor: pointer; margin-top: 15px;"><a href="https://github.com/YannickMassicotte?tab=repositories"></a>See less</button>
 		</section>
 
 	</section>
@@ -106,6 +137,18 @@
 			<script src="assets/js/main.js"></script>
 			<!-- Modal Popup Projects -->
 			<script>
+				$(".btn-more").click(function(){
+					$(".more").css("display", "block");
+					$("html, body").animate({
+						scrollTop: $(".more-text").offset().top
+					}, 1500);
+				});
+				$(".btn-less").click(function(){
+					$(".more").css("display", "none");
+					$("html, body").animate({
+						scrollTop: $(".some-text").offset().top
+					}, 1500);
+				});
 				$(".scale-change").hover(function(e){
 					$(this).toggleClass('animate');
 				});
@@ -116,6 +159,14 @@
 				});
 				$(".btn-mod").click(function(){
 					$(".modal").css("display", "none");
+				});
+				$(".btn-see-code").click(function(e){
+					modals.forEach(modal => {
+						if(modal.img === $(e.target.parentElement.nextElementSibling).attr("src")){
+							console.log(`${modal.git}`)
+							window.open(`${modal.git}`);
+						}
+					});
 				});
 			</script>
 			<!-- !Modal Popup Projects -->
